@@ -9,11 +9,11 @@
 
           <div class="card__body">
             <p class="label">Username</p>
-            <input type="text" class="input" placeholder="Username">
+            <input type="text" class="input" placeholder="Username" v-model="formValues.username">
             <p class="label">E-mail</p>
-            <input type="text" class="input" placeholder="E-mail">
+            <input type="text" class="input" placeholder="E-mail" v-model="formValues.email">
             <p class="label">Password</p>
-            <input type="text" class="input" placeholder="Password">
+            <input type="text" class="input" placeholder="Password" v-model="formValues.password">
           </div>
 
           <div class="card__footer">
@@ -31,6 +31,11 @@
 export default {
   data() {
     return {
+      formValues: {
+        username: '',
+        email: '',
+        login: ''
+      }
     };
   },
 
