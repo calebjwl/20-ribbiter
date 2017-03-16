@@ -2,7 +2,7 @@
   <div class="application">
     <div class="top-nav">
       <div class="home">
-        <router-link class="link " :to="{ name: 'ribbits' }">Ribbiter</router-link>
+        <router-link class="link" :to="{ name: 'ribbits' }">Ribbiter</router-link>
       </div>
 
       <div class="top-nav_links">

@@ -15,9 +15,9 @@
           </div>
 
           <div class="card__footer">
-            <router-link :to="{ name: 'register' }"><button class="button register-button">Register</button></router-link>
+            <router-link :to="{ name: 'register' }"><button class="button button-blue">Register</button></router-link>
             <!-- fix route -->
-            <router-link :to="{ name: 'login' }"><button class="button register-button">Login</button></router-link>
+            <router-link :to="{ name: 'login' }"><button class="button button-green">Login</button></router-link>
           </div>
         </div>
       </div>
