@@ -2,13 +2,13 @@
   <div class="application">
     <div class="top-nav">
       <div class="home">
-        <a href="#">Ribbiter</a>
+        <router-link class="link " :to="{ name: 'ribbits' }">Ribbiter</router-link>
       </div>
 
       <div class="top-nav_links">
-        <a href="#" class="link">Ribbets</a>
-        <a href="#" class="link">Frogs</a>
-        <a href="#" class="link">Login</a>
+        <router-link class="link" :to="{ name: 'ribbits' }">Ribbits</router-link>
+        <router-link class="link" :to="{ name: 'frogs' }">Frogs</router-link>
+        <router-link class="link" :to="{ name: 'login' }">Login</router-link>
       </div>
     </div>
 
