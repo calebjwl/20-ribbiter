@@ -1,0 +1,40 @@
+.users-container {
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &__item {
+    min-width: calc(100% / 3);
+  }
+}
+
+.user-card {
+  display: flex;
+  margin: 1rem;
+  padding: 1rem;
+  background: $c-pure-white;
+  box-shadow: 3px 3px 3px rgba(#3e3e3e,.3);
+
+  &__pic {
+    width: 35%;
+  }
+
+  &__info {
+    padding-left: 0.5rem;
+  }
+
+  &__name {
+    margin: 0;
+  }
+
+  &__id {
+    margin: 0;
+    color: $c-secondary;
+    text-decoration: underline;
+  }
+}

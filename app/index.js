@@ -8,7 +8,7 @@ import Index from './routes/index.vue';
 import Register from './routes/register.vue';
 import Login from './routes/login.vue';
 import Ribbits from './routes/ribbits.vue';
-import Users from './routes/users.vue';
+import Users from './routes/users-index.vue';
 
 Vue.use(VueRouter);
 
