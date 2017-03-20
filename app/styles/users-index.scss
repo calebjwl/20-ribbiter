@@ -3,13 +3,21 @@
   margin: 0 auto;
 }
 
+.users-header {
+  border-bottom: $c-secondary 0.1rem solid;
+
+  &__text {
+    margin: 0;
+  }
+}
+
 .grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 
   &__item {
-    min-width: calc(100% / 3);
+    flex-basis: calc(100% / 3);
   }
 }
 
@@ -21,7 +29,8 @@
   box-shadow: 3px 3px 3px rgba(#3e3e3e,.3);
 
   &__pic {
-    width: 35%;
+    width: 15vh;
+    height: 15vh;
   }
 
   &__info {
