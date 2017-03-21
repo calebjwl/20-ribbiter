@@ -22,8 +22,7 @@
 
           <div class="card__footer">
             <router-link :to="{ name: 'login' }"><button class="button button-blue">Login</button></router-link>
-            <!-- fix route -->
-            <button v-on:click="create()" class="button button-green">Sign up</button>
+            <button v-on:click="save()" class="button button-green">Sign up</button>
           </div>
         </div>
       </div>
@@ -52,7 +51,7 @@ export default {
     save() {
       store.dispatch(create(this.formValues))
       .then(() => {
-        this.$router.push({ name: 'users' });
+        this.$router.push({ name: 'frogs' });
       }).catch(() => {});
     },
 

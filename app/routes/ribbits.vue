@@ -13,15 +13,14 @@
                 <h3 class="card__header-title">New Ribbit</h3>
               </div>
 
-              <div class="card__body">
+              <form class="card__body" v-on:submit.prevent="save()">
                 <h4 class="label">What's hoppin?</h4>
-                <textarea class="textbox" id="" cols="40" rows="8"></textarea>
-              </div>
-
-              <div class="card__footer">
-                <button class="button button-blue">Clear</button>
-                <button class="button button-green">Save</button>
-              </div>
+                <textarea v-model="formValues.body" class="textbox" id="" cols="40" rows="8"></textarea>
+                <div class="card__footer">
+                  <button v-on:click.prevent="clear()" class="button button-blue">Clear</button>
+                  <button class="button button-green">Post</button>
+                </div>
+              </form>
             </div>
           </div>
 
@@ -32,14 +31,16 @@
               </div>
 
               <div class="card__body">
-                <button class="button button-blue feed-load">
+                <button v-on:click = "loadNew()" class="button button-blue feed-load">
                   <h3 class="feed-load__text">Load New Ribbits</h3>
                 </button>
               </div>
 
-              <div class="panel">
-                <h3 class="user-card__id">$caleb</h3>
-                <p>This is a ribbit</p>
+              <div class="posts" v-for="post in posts.items">
+                <div class="panel">
+                  <h3 class="user-card__id">{{ post.username }}</h3>
+                  <p>{{ post.body }}</p>
+                </div>
               </div>
             </div>
           </div>
@@ -50,14 +51,39 @@
 </template>
 
 <script>
+import postResource from '../resources/post';
+import userResource from '../resources/user';
+import store from '../store';
+const findAll = postResource.actionCreators.findAll;
+const create = userResource.actionCreators.create;
+
 export default {
   data() {
     return {
+      posts: this.$select('posts'),
+      formValues: {
+        body: '',
+      }
     };
   },
 
-  methods: {
+  created() {
+    store.dispatch(findAll());
+  },
 
+  methods: {
+    save() {
+      store.dispatch(create(this.formValues));
+      this.formValues.body = '';
+    },
+
+    clear() {
+      this.formValues.body = '';
+    },
+
+    loadNew() {
+      store.dispatch(findAll());
+    }
   },
 };
 </script>
