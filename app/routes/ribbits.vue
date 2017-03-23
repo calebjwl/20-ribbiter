@@ -31,7 +31,7 @@
               </div>
 
               <div class="card__body">
-                <button v-on:click = "loadNew()" class="button button-blue feed-load">
+                <button v-on:click = "load()" class="button button-blue feed-load">
                   <h3 class="feed-load__text">Load New Ribbits</h3>
                 </button>
               </div>
@@ -60,28 +60,29 @@ const create = userResource.actionCreators.create;
 export default {
   data() {
     return {
-      posts: this.$select('posts'),
       formValues: {
         body: '',
-      }
+      },
+      posts: this.$select('posts'),
     };
   },
 
   created() {
-    store.dispatch(findAll());
+    this.load();
   },
 
   methods: {
     save() {
-      store.dispatch(create(this.formValues));
-      this.formValues.body = '';
+      store.dispatch(create(this.formValues))
+      .catch(() => {});
+      this.clear();
     },
 
     clear() {
       this.formValues.body = '';
     },
 
-    loadNew() {
+    load() {
       store.dispatch(findAll());
     }
   },
