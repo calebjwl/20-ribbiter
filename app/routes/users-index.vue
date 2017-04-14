@@ -6,7 +6,7 @@
           <h1 class="users-header__text">Users</h1>
         </div>
         <div class="grid">
-          <div v-for="user in users" class="grid__item">
+          <div v-for="user in users.items" class="grid__item">
             <div class="user-card shadow">
               <img src="http://placecera.com/100/100" alt="" class="user-card__pic">
 

@@ -13,12 +13,12 @@
                 <h3 class="card__header-title">New Ribbit</h3>
               </div>
 
-              <form class="card__body" v-on:submit.prevent="save()">
+              <form class="card__body" v-on:submit.prevent="save">
                 <h4 class="label">What's hoppin?</h4>
                 <textarea v-model="formValues.body" class="textbox" id="" cols="40" rows="8"></textarea>
                 <div class="card__footer">
-                  <button v-on:click.prevent="clear()" class="button button-blue">Clear</button>
-                  <button class="button button-green">Post</button>
+                  <button v-on:click.prevent="clear" class="button button-blue">Clear</button>
+                  <button type="submit" class="button button-green">Post</button>
                 </div>
               </form>
             </div>

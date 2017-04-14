@@ -1,6 +1,5 @@
 <template lang="html">
   <div class="register">
-    <pre>{{ formValues }}</pre>
     <div class="section">
       <div class="container">
         <div class="error" v-if="users.loading === 'error'">
