@@ -1,0 +1,41 @@
+.ribbits-container {
+  display: flex;
+}
+
+.sidebar {
+  width: 30%;
+  margin: 1rem 1rem 1rem 0;
+}
+
+.shadow {
+  box-shadow: 3px 3px 3px rgba(#3e3e3e,.3);
+}
+
+.textbox {
+  width: 100%;
+  max-width: 100%;
+  border: 0;
+  border-bottom: $c-secondary 0.2rem solid;
+  background: $c-white;
+}
+
+.panel {
+  padding: 0.5rem;
+  border-top: $c-secondary 0.1rem solid;
+}
+
+.feed {
+  width: 70%;
+  margin: 1rem 0 1rem 1rem;
+
+  &-load {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+
+    &__text {
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+.users-container {
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+.users-header {
+  border-bottom: $c-secondary 0.1rem solid;
+
+  &__text {
+    margin: 0;
+  }
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &__item {
+    flex-basis: calc(100% / 3);
+  }
+}
+
+.user-card {
+  display: flex;
+  margin: 1rem;
+  padding: 1rem;
+  background: $c-pure-white;
+
+  &__pic {
+    width: 15vh;
+    height: 15vh;
+  }
+
+  &__info {
+    padding-left: 0.5rem;
+  }
+
+  &__name {
+    margin: 0;
+  }
+
+  &__id {
+    margin: 0;
+    color: $c-secondary;
+    text-decoration: underline;
+  }
+}
